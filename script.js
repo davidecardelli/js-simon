@@ -12,3 +12,9 @@ const seconds = document.getElementById('seconds');
 const christmas = new Date ("Dec 25 2022 00:00:00");
 const christmasTime = christmas.getTime();
 console.log(christmasTime);
+
+// Recupero la data attuale per intero
+
+const now = new Date();
+const nowTime = now.getTime();
+console.log(nowTime);
