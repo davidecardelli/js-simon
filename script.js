@@ -27,17 +27,17 @@ const countdown = setInterval(function() {
 
     const timeLeft = christmasTime - nowTime;
 
-    // const second = 1000;
-    // const minute = second * 60;
-    // const hour = minutes * 60;
-    // const day = hours * 24;   
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;   
 
    // Imposto le varie formule matematiche che mi vadano a ricavare dai millisecondi i giorni le ore i minuti e i secondi
 
-    const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hoursLeft = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    const daysLeft = Math.floor(timeLeft / day);
+    const hoursLeft = Math.floor((timeLeft % day) / hour);
+    const minutesLeft = Math.floor((timeLeft % hour) / minute);
+    const secondsLeft = Math.floor((timeLeft % minute) / second);
 
     days.innerText = daysLeft;
     hours.innerText = hoursLeft;
