@@ -9,7 +9,7 @@ const seconds = document.getElementById('seconds');
 
 // Imposto funzione che scala ogni secondo
 
-const countdown = setInterval(function() {
+const countdown = () => {
 
     // Recupero la data di Natale per intero
     const christmas = new Date ("Dec 25 2022 00:00:00");
@@ -50,4 +50,7 @@ const countdown = setInterval(function() {
     }
 
 
-}, 1000);
+};
+
+countdown();
+setInterval(countdown, 1000);
